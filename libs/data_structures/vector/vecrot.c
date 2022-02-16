@@ -3,7 +3,6 @@
 
 vector createVector(size_t n){
     int *data = (int*) malloc (n * sizeof(int));
-
     if(!data){
         fprintf(stderr, "bad alloc");
         exit(1);
@@ -36,8 +35,6 @@ void shrinkToFit(vector *v){
     reserve(v,v->size);
 }
 void deleteVector(vector *v){
-
     v->data = (int*) malloc(v->size = 0);
-
     realloc(v->data, 0);
 }
