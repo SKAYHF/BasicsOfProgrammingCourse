@@ -1,8 +1,10 @@
 #ifndef UNTITLED1_VECTOR_H
 #define UNTITLED1_VECTOR_H
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <assert.h>
 
 typedef struct vector {
     int *data;
