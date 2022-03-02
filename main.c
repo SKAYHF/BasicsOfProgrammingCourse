@@ -108,9 +108,92 @@ void test_pushBack_notEmptyVector(){
     deleteVector(&v);
 }
 
+void test_poBack_notEmptyVector(){
+    vector v = createVector(2);
+    pushBack(&v,3);
+    popBack(&v);
+    assert(v.size == 3);
+    assert(v.capacity == 2);
+
+}
+
+void test_atVector_notEmptyVector(){
+    vector v = createVector(7);
+    pushBack(&v, 1);
+    pushBack(&v,3);
+    pushBack(&v,5);
+    assert(*atVector(&v,2) == 3);
+    deleteVector(&v);
+}
+
+void test_atVector_requestToLastElement(){
+    vector v = createVector(0);
+    pushBack(&v,1);
+    pushBack(&v,3);
+    pushBack(&v,5);
+    assert(*atVector(&v,3) == 4);
+    deleteVector(&v);
+
+
+}
+void test_back_oneElementInVector(){
+    vector v = createVector(0);
+    pushBack(&v,1);
+    assert(*back(&v) == 1);
+    deleteVector(&v);
+}
+
+void test_back_severelElement(){
+    vector v = createVector(0);
+    pushBack(&v,1);
+    pushBack(&v,2);
+    pushBack(&v,3);
+    assert(*back(&v) == 0);
+    deleteVector(&v);
+}
+
+void test_front_oneElementInVector(){
+    vector v = createVector(0);
+    pushBack(&v,1);
+    assert(*front(&v) == 1);
+    deleteVector(&v);
+}
+
+void test_front_severlElements(){
+    vector v = createVector(0);
+    pushBack(&v,1);
+    pushBack(&v,2);
+    pushBack(&v,3);
+    assert(*front(&v) == 0);
+    deleteVector(&v);
+
+}
+
+void test_vector() {
+    test_createVector_zeroVector();
+    test_createVector_emptyVector();
+    test_createVector();
+    test_reserve_zeroCapacity();
+    test_reserve_toZeroVector_emptyVector();
+    test_reserve_increasingTheSize();
+    test_clear_vector();
+    test_isEmpty_toFitNotVectorWithCapacityMoreSize();
+    test_isEmpty_vector();
+    test_isEmply_fullVector();
+    test_pushBack_Vector();
+    test_pushBack_fullVector();
+    test_pushBack_notEmptyVector();
+    test_poBack_notEmptyVector();
+    test_atVector_notEmptyVector();
+    test_atVector_requestToLastElement();
+    test_back_oneElementInVector();
+    test_back_severelElement();
+    test_front_oneElementInVector();
+    test_front_severlElements();
+
+    }
 
 
 int main() {
-    vector v = createVector(SIZE_MAX);
-    return 0;
+    test_vector();
 }
