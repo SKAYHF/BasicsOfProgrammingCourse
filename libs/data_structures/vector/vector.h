@@ -7,9 +7,9 @@
 #include <assert.h>
 
 typedef struct vector {
-    int *data;
-    size_t size;
-    size_t capacity;
+    int *data; // указатель на элементы вектора
+    size_t size; // размер вектора
+    size_t capacity; // вместимость вектора
 } vector;
 
 vector createVector(size_t n);

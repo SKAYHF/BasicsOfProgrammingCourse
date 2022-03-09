@@ -34,6 +34,7 @@ void clear(vector *v){
 void shrinkToFit(vector *v){
     reserve(v,v->size);
 }
+
 void deleteVector(vector *v){
     v->data = (int*) malloc(v->size = 0);
     realloc(v->data, 0);
@@ -41,8 +42,8 @@ void deleteVector(vector *v){
 
 bool isEmpty(vector *v){
     return v->size == 0;
-
 }
+
 bool isFull(vector *v){
     v->size == v->capacity;
 }
