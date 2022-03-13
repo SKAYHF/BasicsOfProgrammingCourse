@@ -1,11 +1,23 @@
 "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe" -G Ninja C:\Users\rocks\CLionProjects\untitled1
-CMake Error at libs/data_structures/CMakeLists.txt:5 (add_subdirectory):
-  The source directory
+-- Configuring done
+CMake Error at libs/data_structures/CMakeLists.txt:1 (add_library):
+  Cannot find source file:
 
-    C:/Users/rocks/CLionProjects/untitled1/libs/data_structures/string
-
-  does not contain a CMakeLists.txt file.
+    libs/data_structures/vector/vecrot.c
 
 
--- Configuring incomplete, errors occurred!
-See also "C:/Users/rocks/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+CMake Error at libs/data_structures/string/CMakeLists.txt:1 (add_library):
+  Cannot find source file:
+
+    tasks/removeAdjacentEqualLetters.c
+
+
+CMake Error at libs/data_structures/CMakeLists.txt:1 (add_library):
+  No SOURCES given to target: data_structures
+
+
+CMake Error at libs/data_structures/string/CMakeLists.txt:1 (add_library):
+  No SOURCES given to target: string
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

@@ -9,7 +9,8 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "memory.h"
+#include <memory.h>
+
 
 typedef struct WordDescriptor {
     char *begin; // позиция начала слова
