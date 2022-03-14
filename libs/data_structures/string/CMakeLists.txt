@@ -3,6 +3,6 @@ add_library(string
         tasks/removeAdjacentEqualLetters.c
          tasks/removeNonLetters.c
          tasks/replace.c
-         tasks/printWordsRevers
+         tasks/printWordsRevers.c
 
 )
