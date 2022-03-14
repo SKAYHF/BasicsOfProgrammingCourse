@@ -3,7 +3,7 @@
 CMake Error at libs/data_structures/CMakeLists.txt:1 (add_library):
   Cannot find source file:
 
-    libs/data_structures/vector/vecrot.c
+    libs/data_structures/vector/vector.c
 
 
 CMake Error at libs/data_structures/string/CMakeLists.txt:1 (add_library):

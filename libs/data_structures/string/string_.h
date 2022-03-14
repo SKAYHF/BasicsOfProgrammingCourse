@@ -4,6 +4,7 @@
 #define MAX_STRING_SIZE 100
 #define MAX_N_WORDS_IN_STRING 100
 #define MAX_WORD_SIZE 20
+#define MAX_CHAR 128
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -48,7 +49,7 @@ int strcmp(const char *lhs, const char *rhs);
 
 char *copy(const char *beginSource, const char *endSource, char *beginDestination);
 
-char *copyIf_(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
+char *copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
 
 char *copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
 
