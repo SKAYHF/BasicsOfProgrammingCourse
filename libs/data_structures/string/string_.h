@@ -32,6 +32,7 @@ typedef enum WordBeforeFirstWordWithAReturnCode {
 
 static BagOfWords bag;
 static BagOfWords bag2;
+static char _stringBuffer[MAX_STRING_SIZE + 1];
 
 size_t strlen(const char *begin);
 
@@ -49,11 +50,18 @@ int strcmp(const char *lhs, const char *rhs);
 
 char *copy(const char *beginSource, const char *endSource, char *beginDestination);
 
+bool cmpWord(WordDescriptor w1, WordDescriptor w2);
+
 char *copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
 
 char *copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
 
 char *getEndOfString(char *begin);
+
+int getWord(char *beginSearch, WordDescriptor *word);
+
+void getBagOfWords(BagOfWords *_bag, char *str);
+
 
 
 #endif

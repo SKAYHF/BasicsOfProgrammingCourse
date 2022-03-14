@@ -1,7 +1,7 @@
 #ifndef UNTITLED1_ALLLETTERSINSTRING_H
 #define UNTITLED1_ALLLETTERSINSTRING_H
 
-#include <memory.h>
+#include "../string_.h"
 
 void removeAdjacentEqualLetters(char *s);
 

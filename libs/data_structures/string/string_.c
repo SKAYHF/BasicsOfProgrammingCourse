@@ -82,3 +82,23 @@ char *getEndOfString(char *begin){
         begin++;
     return begin;
 }
+
+int getWord(char *beginSearch, WordDescriptor *word) {
+    word->begin = findNonSpace(beginSearch);
+    if (*word->begin == '\0')
+        return 0;
+
+    word->end = findSpace(word->begin);
+
+    return 1;
+}
+
+void getBagOfWords(BagOfWords *_bag, char *str) {
+    _bag->size = 0;
+
+    WordDescriptor word;
+    while (getWord(str, &word)) {
+        _bag->words[_bag->size++] = word;
+        str = word.end;
+    }
+}
