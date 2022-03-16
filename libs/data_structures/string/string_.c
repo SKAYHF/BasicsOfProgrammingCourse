@@ -23,11 +23,6 @@ char *findNonSpace(char *begin) {
     return begin;
 }
 
-char *findSpace(char *begin) {
-    while (*begin != '\0' && !isspace(*begin))
-        begin++;
-    return begin;
-}
 
 char *findNonSpaceReverse(char *rbegin, const char *rend) {
     while (*rbegin != '\0' && isspace(*rbegin))
